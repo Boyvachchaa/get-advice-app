@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Manrope;
+    background-color: #202733;
+}
+
+.element {
+    max-width: 540px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 15px;
+    background: #313A48;
+    box-shadow: 30px 50px 80px 0px rgba(0, 0, 0, 0.10);
+    margin-top: 150px;
+    
+    .element_items {
+        
+        .items {
+            p {
+                color:#53FFAA;
+                font-size: 13px;
+                font-weight: 800;
+                letter-spacing: 4.086px;
+                padding: 48px 0px 24px 0px;
+            }
+            h1 {
+                color:#CEE3E9;
+                font-size: 28px;
+                font-weight: 800;
+                letter-spacing: -0.3px;
+                padding: 0px 48px 40px 48px;
+                
+            }
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 16px;
+                .line {
+                    width: 196px;
+                    height: 1px;
+                    background:#4F5D74;
+                }
+            }
+        }
+        button {
+            outline: none;
+            background-color: transparent;
+            border: none;
+            transform: translateY(30px);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+    }
+}
+
+.loading {
+    display: none;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media only screen and (max-width: 550px) {
+    .element {
+        max-width: 343px;
+        
+        .element_items {
+            
+            p {
+                font-size: 11px;
+                padding: 40px 0px 24px 0px;
+            }
+            h1 {
+                font-size: 24px;
+                padding: 0px 24px 24px 24px;
+                
+            }
+            .icon {
+                .line {
+                    width: 122px;
+                }
+            }
+        }
+    }
+}
